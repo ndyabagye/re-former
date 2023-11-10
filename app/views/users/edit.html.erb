@@ -1,0 +1,23 @@
+<h1>Edit the Users</h1>
+
+<!-- <form action="/users" method="post" accept-charset="UTF-8">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label for="username">Username</label>
+	<input type="text" name="user[username]" placeholder="User Name">
+	<label for="email">Email</label>
+	<input type="email" name="user[email]" placeholder="user@test.com">
+	<label for="password">Password</label>
+	<input type="password" name="user[password]" placeholder="Password">
+	<button type="submit">Create User</button>
+</form> -->
+
+
+<%= form_with model: @user do |form| %>
+<%= form.label "Username :" %>     
+<%= form.text_field :username, :placeholder => "User Name" %>     
+<%= form.label "Email :" %>     
+<%= form.email_field :email, :placeholder => "user@test.com" %>     
+<%= form.label "Password :" %>     
+<%= form.password_field :username, :value => "User Name" %>     
+<%= form.submit "Create User" %>     
+<% end %> 
